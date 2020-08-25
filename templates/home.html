@@ -5,9 +5,10 @@
 {% block content %}
    {% if user.is_authenticated %}
       Hello, {{ user.username }}! Your DisplayName is: {{ user.displayname }}
+      <div>{{ display }}</div>
       <p><a href="{% url 'logout' %}">logout</a></p>
  {% else %}
-   <h3>Your are not loggin in</h3>
+   <h3>Your are not logged in</h3>
    <a href="{% url 'login' %}">login</a>
    <a href="{% url 'signup' %}">signup</a>
  {% endif %}
