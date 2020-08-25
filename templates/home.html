@@ -3,10 +3,12 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
- {% if user.is_authenticated %}
-    <p><a href="{% url 'logout' %}">logout</a></p>
+   {% if user.is_authenticated %}
+      Hello, {{ user.username }}! Your DisplayName is: {{ user.displayname }}
+      <p><a href="{% url 'logout' %}">logout</a></p>
  {% else %}
-    <p><a href="{% url 'login' %}">login</a></p>
-    <p><a href="{% url 'signup' %}">signup</a></p>
+   <h3>Your are not loggin in</h3>
+   <a href="{% url 'login' %}">login</a>
+   <a href="{% url 'signup' %}">signup</a>
  {% endif %}
 {% endblock %}
