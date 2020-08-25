@@ -18,6 +18,7 @@ class CustomUserAdmin(UserAdmin):
     """
     fieldsets = (
         *UserAdmin.fieldsets,
+        (
             'Additional User Fields',
             {
                 'fields': (
