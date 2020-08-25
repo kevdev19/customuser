@@ -4,8 +4,8 @@
 
 {% block content %}
    {% if user.is_authenticated %}
-      Welcome, <strong>{{ user.username }}</strong>! 
-      Your DisplayName is: <strong>{{ user.displayname }}</strong>
+      <div><p>Welcome, <strong>{{ user.username }}</strong>!</p></div>
+      <p>Your DisplayName is: <strong>{{ user.displayname }}</strong></p>
       <div>{{ display }}</div>
       <p><a href="{% url 'logout' %}">logout</a></p>
  {% else %}
